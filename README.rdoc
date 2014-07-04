@@ -1,9 +1,9 @@
 = GLSL reflection and refraction
 
-[...]
+OpenGL GLSL shader test : fresnel reflection and refraction
 
 == Screenshot
-soon...
+link:./media/GLSL-reflection-and-refraction-screenshot.png
 
 == Video
 soon...
