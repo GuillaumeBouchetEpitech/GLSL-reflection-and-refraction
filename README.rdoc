@@ -6,6 +6,6 @@ OpenGL GLSL shader test : fresnel reflection and refraction
 link:./media/GLSL-reflection-and-refraction-screenshot.png
 
 == Video
-soon...
+https://www.youtube.com/watch?v=uQjxJE1vHos&feature=youtu.be
 
 == Thanks for watching !
