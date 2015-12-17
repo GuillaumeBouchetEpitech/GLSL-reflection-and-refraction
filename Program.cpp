@@ -107,9 +107,13 @@ void	Program::Initialize_3D()
   {
 
     m_FresnelModelMatrix.Make_Identity();
+    // m_pFresnelGeometry = GL_Geometry::CreateTorus( 0.0f, 180.0f,
+				// 		   100.0f, 50.0f,70.0f,
+				// 		   60, 60 );
     m_pFresnelGeometry = GL_Geometry::CreateTorus( 0.0f, 180.0f,
-						   100.0f, 50.0f,70.0f,
-						   60, 60 );
+                                                50.0f, 15.0f, 20.0f,
+                                                60, 60 );
+    // m_pFresnelGeometry = GL_Geometry::CreateSphere( 25.0f, 3 );
 
     m_MainSphereShader.loadFromFile( "./res/shaders/glass.vert.glsl.c",
 				     "./res/shaders/glass.frag.glsl.c" );
@@ -314,8 +318,8 @@ void	Program::Render_3D_FresnelTorus(GL_Matrix& viewProjectionMatrix)
 {
   m_MainSphereShader.setParameter( "u_viewProjectionMatrix", viewProjectionMatrix );
 
-  m_MainSphereShader.setParameter( "u_cubemap", m_CubeMap );
-  // m_MainSphereShader.setParameter( "u_cubemap", m_CubeMap_dynamic );
+  // m_MainSphereShader.setParameter( "u_cubemap", m_CubeMap );
+  m_MainSphereShader.setParameter( "u_cubemap", m_CubeMap_dynamic );
 
   m_MainSphereShader.setAttrib( "a_vertex", 3, GL_FLOAT, GL_FALSE, 0,
 				&(m_pFresnelGeometry->m_Vertices[0].x) );

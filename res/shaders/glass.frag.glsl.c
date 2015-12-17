@@ -15,5 +15,4 @@ void main(void)
   vec4 reflectionColor = texture( u_cubemap, normalize( v_reflection ) );
 
   fragColor = mix( refractionColor, reflectionColor, v_fresnel );
-  /* fragColor = mix( vec4(0,1,0,1), vec4(1,0,0,1), v_fresnel ); */
 }
